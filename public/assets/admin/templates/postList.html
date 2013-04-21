@@ -1,0 +1,10 @@
+<a href="#/add" class="btn btn-success" id="postBtn">Add Post</a>
+
+<ul class="postList">
+	<li class="postSearch clearfix">
+		<input type="text" ng-model="q" placeholder="Search&hellip;" class="pull-left">
+	</li>
+	<li ng-repeat="post in posts | filter:q">
+		<a href="#/edit/[[posts.indexOf(post)+1]]" class="postLink">[[post.title | truncate:40]]</a>
+	</li>
+</ul>

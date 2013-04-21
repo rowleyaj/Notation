@@ -1,0 +1,26 @@
+<header id="pageHeader" class="clearfix">
+	<ul class="pull-left unstyled">
+		<li>
+			<a href="#/" class="btn">
+				Posts
+			</a>
+		</li>
+	</ul>
+	<ul class="pull-right unstyled inline">
+		<li>
+			<button class="btn btn-danger" ng-click="deletePost()">Delete Post</button>
+		</li>
+		<li>
+			<button class="btn btn-success" ng-click="savePost()" id="saveBtn" disabled>Saved</button>
+		</li>
+	</ul>
+</header>
+
+<div class="canvas">
+	
+	<input type="text" ng-model="newPost.title" placeholder="Title" ng-change="setSlug()">
+	<input type="text" ng-model="newPost.date" placeholder="Date" ng-change="setChanged()" class="dateInput">
+	<input type="text" ng-model="newPost.slug" placeholder="Post Slug" ng-change="cleanSlug()" class="slugInput">
+	<textarea id="editor" ng-model="newPost.markdown" ng-change="setChanged()" placeholder="Just write."></textarea>
+	
+</div>
